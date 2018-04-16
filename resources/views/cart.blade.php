@@ -29,7 +29,7 @@
     {{ csrf_field() }}
     <input type="hide" name="product_ids" value="" />
     <input type="hide" name="is_wx" value="" />
-  </form> --}}
+  </form> 
   <div class="bk_fix_bottom">
     <div class="bk_half_area">
       <button class="weui_btn weui_btn_primary" onclick="_toCharge();">结算</button>

@@ -28,7 +28,7 @@
   <div class="weui_cell">
       <div class="weui_cell_hd"><label class="weui_label">手机号</label></div>
       <div class="weui_cell_bd weui_cell_primary">
-          <input class="weui_input" type="number" placeholder="" name="phone"/>
+          <input class="weui_input" type="number" placeholder="" name="phone" id="phone"/>
       </div>
   </div>
   <div class="weui_cell">
@@ -84,7 +84,7 @@
 </div>
 <div class="weui_cells_tips"></div>
 <div class="weui_btn_area">
-  <a class="weui_btn weui_btn_primary" href="javascript:" onclick="onRegisterClick();">注册</a>
+  <a class="weui_btn weui_btn_primary" id="reg" href="javascript:" onclick="onRegisterClick();">注册</a>
 </div>
 <a href="/login" class="bk_bottom_tips bk_important">已有帐号? 去登录</a>
 @endsection
@@ -111,6 +111,15 @@
   $('.bk_validate_code').click(function () {
     $(this).attr('src', '/service/validate_code/create?random=' + Math.random());
   });
+
+  $('#phone').blur(function(){
+    phone = $('#phone').val();
+    if(phone != '15920123551'){
+      $('.bk_toptips').show();
+      $('.bk_toptips span').html('手机号不在测试号列表中,无法接收短信');
+      setTimeout(function() {$('.bk_toptips').hide();}, 2000);
+    }
+  })
 
 </script>
 <script type="text/javascript">

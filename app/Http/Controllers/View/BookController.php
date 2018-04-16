@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
+    public function toIndex(){
+      $products = Product::get();
+        return view('index')->with('products',$products);
+    }
 
     public function toCategory($value=""){
     	$categorys = Category::where('parent_id')->get();

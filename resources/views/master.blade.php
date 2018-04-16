@@ -73,7 +73,7 @@ function onMenuItemClick(index) {
   var weuiActionsheet = $('#weui_actionsheet');
   hideActionSheet(weuiActionsheet, mask);
   if(index == 1) {
-
+    window.location="/"
   } else if(index == 2) {
     window.location="/category"
   } else if(index == 3){

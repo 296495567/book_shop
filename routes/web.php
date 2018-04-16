@@ -11,7 +11,7 @@
 |
 */
 //登录
-Route::get('',"View\BookController@toCategory");
+Route::get('/',"View\BookController@toIndex");
 Route::get('pay',function(){
 	return view('pay');
 });
@@ -41,6 +41,7 @@ Route::group(['prefix' => 'service'], function(){
 Route::group(['middleware' => 'check.login'], function(){
 	Route::get('/cart',"View\CartController@toCart");
 	Route::post('/order_commit','View\OrderController@toOrderCommit');
+  Route::get('/again_commit/{id}','View\OrderController@AgainCommit');
 	Route::get('/order_list','View\OrderController@toOrderList');
 	Route::post('/alipay', 'View\PayController@aliPay');
 });

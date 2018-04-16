@@ -8,9 +8,12 @@
       <span>订单号: {{$order->order_no}}</span>
 
         @if($order->status == 1)
-          <span style="float: right;" class="bk_price">
+          <!-- <span style="float: right;" class="bk_price">
             未支付
-          </span>
+          </span> -->
+          <a style="float: right;font-size: 16px;" class="bk_price" href="/again_commit/{{$order->id}}">
+            去完成支付
+          </a>
         @else
           <span style="float: right;" class="bk_important">
             已支付

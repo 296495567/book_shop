@@ -23,7 +23,7 @@
 		<div class="weui_cell_bd weui_cell_primary">
 			<p>cell</p>
 		</div>
-		<div class="weui_cell_ft">说明文字</div>
+		<div class="weui_cell_ft"></div>
 	</a>
 </div>
 
@@ -64,7 +64,7 @@ function _getCategory(){
 							'<div class="weui_cell_bd weui_cell_primary">'+
 								'<p>'+ data.categorys[i].name +'</p>'+
 							'</div>'+
-							'<div class="weui_cell_ft">说明文字</div>'+
+							'<div class="weui_cell_ft"></div>'+
 						'</a>';
 				$('.weui_cells_access').append(node);
         	}
